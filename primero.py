@@ -16,6 +16,7 @@ class MyApp(wx.App):
         self.frame.Show()
         return True
 
+print("Esto es una presentacion limpia")
 app = MyApp()
 app.MainLoop()
 
