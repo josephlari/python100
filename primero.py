@@ -3,19 +3,19 @@
 import wx
 
 class MyFrame(wx.Frame):
-    def __init__(self,parent,title):
-        super(MyFrame, self).__init__(parent,title=title)
-
-
+    def __init__(self, parent, title):
+        super(MyFrame, self).__init__(parent, title=title)
+        
+        # Cargar el ícono desde un archivo .ico en la misma carpeta
+        icon = wx.Icon("math.ico", wx.BITMAP_TYPE_ICO)
+        self.SetIcon(icon)
 
 class MyApp(wx.App):
     def OnInit(self):
-        self.frame=MyFrame(parent=None, title="Creo que aqui va el titulo")
+        self.frame = MyFrame(parent=None, title="MatPlotLib con WsPython")
         self.frame.Show()
-
         return True
 
-app=MyApp()
+app = MyApp()
 app.MainLoop()
-
 
